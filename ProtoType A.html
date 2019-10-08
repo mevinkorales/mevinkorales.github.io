@@ -18,29 +18,16 @@
 <!--[if lt IE 9]><script type="text/javascript">var IE_fix=true;</script><![endif]-->
 <script type="text/javascript">
 function reDirectFuction(){
-    var url_target = "https://www.wichita.edu/";
-
-    var y =Math.random(); 
-    var urla = "ProtoType A.html";
-    var urlb = "ProtoType B.html";
-    //var urla = "https://www.google.com/";
-    //var urlb = "https://www.bing.com/";
-
-
-    if(y<0.5)
-        { url_target=urla; } 
-    else
-        {url_target=urlb; } 
-    
+    var url = "https://www.wichita.edu/";
     if(typeof IE_fix != "undefined") // IE8 and lower fix to pass the http referer
     {
         document.write("redirecting..."); // Don't remove this line or appendChild() will fail because it is called before document.onload to make the redirect as fast as possible. Nobody will see this text, it is only a tech fix.
         var referLink = document.createElement("a");
-        referLink.href = url_target;
+        referLink.href = url;
         document.body.appendChild(referLink);
         referLink.click();
     }
-    else { window.location.replace(url_target); } // All other browsers
+    else { window.location.replace(url); } // All other browsers
 }
 </script>
 
@@ -50,14 +37,10 @@ function reDirectFuction(){
             <h1>Welcome to Jibo He's website</h1>
 <h2>Eye tracking and usability book</h2>
 
-<button onclick="reDirectFuction()">Purchase it now! </button>
-
+<img src="eye-tracking-book.jpg" width="10%"  height="150px">
+<img src="jordan-fisher.jpg" width="10%" height="150px">
 <br>
-<form action="" method="get">
-    <label for="GET-name">Coupon Code:</label>
-    <input id="GET-name" type="text" name="name">
-    <input type="submit" value="Save Money" onclick="reDirectFuction()">
-    </form>
+<button onclick="reDirectFuction()">Purchase it now! </button>
 </div>
 </body>
 </html>
